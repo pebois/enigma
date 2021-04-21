@@ -1,6 +1,6 @@
 {
   "name": "@pebois/enigma",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Enigma machine",
   "author": "Pierre-Emmanuel Bois",
   "main": "dist/index.js",
