@@ -15,6 +15,7 @@
     "outDir": "./dist",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "declaration": true,
     "baseUrl": ".",
     "paths": {
       "@enigma/*": [
