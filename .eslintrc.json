@@ -1,0 +1,250 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "plugin:mocha/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "plugins": [
+    "sort-destructure-keys",
+    "mocha",
+    "promise"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2017,
+    "sourceType": "module"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
+  "env": {
+    "es6": true,
+    "node": true,
+    "mocha": true,
+    "browser": true,
+    "commonjs": true
+  },
+  "overrides": [
+    {
+      "plugins": [
+        "typescript-sort-keys"
+      ],
+      "extends": [
+        "plugin:import/typescript",
+        "plugin:@typescript-eslint/recommended"
+      ],
+      "files": [
+        "**.ts"
+      ],
+      "rules": {
+        "@typescript-eslint/ban-types": "off",
+        "@typescript-eslint/camelcase": "off",
+        "@typescript-eslint/explicit-function-return-type": [
+          "error",
+          {
+            "allowExpressions": true
+          }
+        ],
+        "@typescript-eslint/indent": [
+          "error",
+          2
+        ],
+        "@typescript-eslint/member-delimiter-style": [
+          "error",
+          {
+            "multiline": {
+              "delimiter": "none",
+              "requireLast": true
+            },
+            "singleline": {
+              "delimiter": "comma",
+              "requireLast": false
+            }
+          }
+        ],
+        "@typescript-eslint/no-unused-vars": [
+          "error",
+          {
+            "args": "none",
+            "ignoreRestSiblings": true,
+            "vars": "all"
+          }
+        ],
+        "@typescript-eslint/no-use-before-define": "off",
+        "@typescript-eslint/no-var-requires": "error",
+        "@typescript-eslint/prefer-for-of": "error",
+        "@typescript-eslint/quotes": [
+          "error",
+          "single"
+        ],
+        "@typescript-eslint/semi": [
+          "error",
+          "never"
+        ],
+        "@typescript-eslint/space-before-function-paren": [
+          "error",
+          {
+            "anonymous": "always",
+            "asyncArrow": "always",
+            "named": "always"
+          }
+        ],
+        "@typescript-eslint/type-annotation-spacing": [
+          "error",
+          {
+            "before": false,
+            "after": true,
+            "overrides": {
+              "arrow": {
+                "before": true,
+                "after": true
+              }
+            }
+          }
+        ],
+        "typescript-sort-keys/interface": "error",
+        "typescript-sort-keys/string-enum": "error"
+      }
+    }
+  ],
+  "rules": {
+    "array-bracket-spacing": [
+      "error",
+      "always",
+      {
+        "arraysInArrays": false,
+        "objectsInArrays": false,
+        "singleValue": true
+      }
+    ],
+    "arrow-spacing": [
+      "error",
+      {
+        "after": true,
+        "before": true
+      }
+    ],
+    "block-spacing": "error",
+    "brace-style": [
+      "error",
+      "stroustrup"
+    ],
+    "comma-dangle": [
+      "error",
+      "always-multiline"
+    ],
+    "comma-spacing": [
+      "error",
+      {
+        "after": true,
+        "before": false
+      }
+    ],
+    "computed-property-spacing": [
+      "error",
+      "never",
+      {
+        "enforceForClassMembers": true
+      }
+    ],
+    "eol-last": [
+      "error",
+      "always"
+    ],
+    "func-style": [
+      "error",
+      "declaration",
+      {
+        "allowArrowFunctions": true
+      }
+    ],
+    "indent": "off",
+    "key-spacing": [
+      "error",
+      {
+        "afterColon": true,
+        "beforeColon": false,
+        "mode": "strict"
+      }
+    ],
+    "keyword-spacing": [
+      "error",
+      {
+        "after": true,
+        "before": true
+      }
+    ],
+    "mocha/no-skipped-tests": "off",
+    "multiline-ternary": "off",
+    "no-console": [
+      "warn",
+      {
+        "allow": [
+          "table",
+          "error"
+        ]
+      }
+    ],
+    "no-eval": "error",
+    "no-irregular-whitespace": "error",
+    "no-mixed-spaces-and-tabs": "error",
+    "no-multi-spaces": "error",
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxBOF": 1
+      }
+    ],
+    "no-trailing-spaces": "error",
+    "no-underscore-dangle": "off",
+    "no-unused-vars": "off",
+    "no-useless-rename": [
+      "error",
+      {
+        "ignoreDestructuring": false,
+        "ignoreImport": false,
+        "ignoreExport": false
+      }
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "operator-linebreak": [
+      "error",
+      "after"
+    ],
+    "padded-blocks": [
+      "error",
+      "never"
+    ],
+    "promise/always-return": "error",
+    "promise/no-return-wrap": "error",
+    "promise/param-names": "error",
+    "promise/catch-or-return": "error",
+    "promise/no-native": "off",
+    "promise/no-nesting": "warn",
+    "promise/no-promise-in-callback": "warn",
+    "promise/no-callback-in-promise": "warn",
+    "promise/avoid-new": "warn",
+    "promise/no-new-statics": "error",
+    "promise/no-return-in-finally": "warn",
+    "promise/valid-params": "warn",
+    "semi": [
+      "error",
+      "never"
+    ],
+    "sort-destructure-keys/sort-destructure-keys": "error",
+    "space-before-blocks": "error",
+    "space-before-function-paren": "off",
+    "space-in-parens": [
+      "error",
+      "never"
+    ],
+    "space-infix-ops": "error"
+  }
+}
