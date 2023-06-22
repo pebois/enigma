@@ -3,5 +3,6 @@
     "src/index.ts",
     "test/*.test.ts"
   ],
+  "dts": true,
   "sourcemap": true
 }
