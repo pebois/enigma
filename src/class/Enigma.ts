@@ -1,6 +1,6 @@
-import Plugboard, { createPlugboard } from '@enigma/class/Plugboard'
-import Reflector, { createReflector } from '@enigma/class/Reflector'
-import Rotor, { createRotor } from '@enigma/class/Rotor'
+import Plugboard, { createPlugboard } from '@/class/Plugboard'
+import Reflector, { createReflector } from '@/class/Reflector'
+import Rotor, { createRotor } from '@/class/Rotor'
 
 export default class Enigma {
   constructor (rotors: string[], reflector: string, rotorPositions: number[], ringSettings: number[], plugboardConnections?: string) {

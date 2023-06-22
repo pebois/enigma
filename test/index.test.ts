@@ -1,8 +1,8 @@
-import Enigma from '@enigma/class/Enigma'
+import Enigma from '@/class/Enigma'
 import { assert } from 'chai'
 
 describe('Enigma', function () {
-  context('Encrypt', function () {
+  describe('Encrypt', function () {
     it('Basic settings', function () {
       const input = 'ABCDEFGHIJKLMNOPQRSTUVWXYZAAAAAAAAAAAAAAAAAAAAAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBABCDEFGHIJKLMNOPQRSTUVWXYZ'
       const output = 'BJELRQZVJWARXSNBXORSTNCFMEYHCXTGYJFLINHNXSHIUNTHEORXOPLOVFEKAGADSPNPCMHRVZCYECDAZIHVYGPITMSRZKGGHLSRBLHL'
@@ -43,7 +43,7 @@ describe('Enigma', function () {
       assert.ok(output === machine.encrypt(input))
     })
   })
-  context('Plug board', function () {
+  describe('Plug board', function () {
     it('4 plugs', function () {
       const input = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
       const output = 'QREBNMCYZELKQOJCGJVIVGLYEMUPCURPVPUMDIWXPPWROOQEGI'
@@ -81,7 +81,7 @@ describe('Enigma', function () {
       assert.ok(output === machine.encrypt(input))
     })
   })
-  context('Decrypt', function () {
+  describe('Decrypt', function () {
     it('Message', function () {
       const secret = 'THEONLYWINNINGMOVEISNOTTOPLAY'
       const first = new Enigma(
